@@ -1,0 +1,13 @@
+version: '3.0'
+
+services:
+  backend:
+    image: back:v1
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
